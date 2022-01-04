@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day3 javascript</title>
+    <link rel="stylesheet" href="day3style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="line">
+        <p>모<span class="mo-line"></span></p>
+        <p>각<span class="gak-line"></span></p>
+        <p>코<span class="co-line"></span></p>
+    </div>
+    <div class="btn">
+        <button id="mo" onclick="mo_click();">모</button>
+        <button id="gak" onclick="gak_click();">각</button>
+        <button id="co" onclick="co_click();">코</button>
+    </div>
+    <script>
+        function mo_click() {
+            document.querySelector(".mo-line").innerText =" 처럼이니";
+        }
+        function gak_click() {
+            document.querySelector(".gak-line").innerText =" 잡고 열심히 하면";
+        }
+        function co_click() {
+            document.querySelector(".co-line").innerText =" 린이 탈출이다!";
+        }
+    </script>
+</body>
+</html>
