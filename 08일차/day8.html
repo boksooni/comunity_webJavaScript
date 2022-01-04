@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day8 javascript</title>
+    <link rel="stylesheet" href="day8style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <button onclick=flash()>Click me!</button>
+        <h3></h3>
+    </div>
+</body>
+<script>
+    const display = document.querySelector("h3")
+    const word = ["H","A","P","P","Y","N","E","W","Y","E","A","R","~"]
+    let i = 0;
+
+    function flash() {
+        if( i < word.length ){
+        display.innerText = display.innerText + word[i];
+        i++;
+    }
+}
+</script>
+</html>
