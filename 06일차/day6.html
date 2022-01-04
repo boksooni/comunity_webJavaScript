@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day6 javascript</title>
+    <link rel="stylesheet" href="day6style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p>계산하고 싶은 계산식을 클릭해보세요!</p>
+    <button class="cal" id = "plus" onclick=plusBtn()>+</button>
+    <button class="cal" id = "minus" onclick=minusBtn()>-</button>
+    <button class="cal" id = "multi" onclick=multiBtn()>*</button>
+    <button class="cal" id = "division" onclick=divisionBtn()>%</button>
+<script>
+    let x = Math.floor(Math.random() * 11)
+    let y = Math.floor(Math.random() * 11)
+
+    const plus = x + y;
+    const minus = x - y;
+    const multi = x * y;
+    const division = x / y;
+
+    function plusBtn() {
+        console.log(`${x} + ${y} = ${plus}`);
+    }
+    function minusBtn() {
+        console.log(`${x} - ${y} = ${minus}`);
+    }
+    function multiBtn() {
+        console.log(`${x} * ${y} = ${multi}`);
+    }
+    function divisionBtn() {
+        console.log(`${x} % ${y} = ${division}`)
+}
+
+</script>
+</body>
+</html>
