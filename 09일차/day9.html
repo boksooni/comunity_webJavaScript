@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day9 javascript</title>
+    <link rel="stylesheet" href="day9style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <div class="wrapper">
+    <div class="hpBtn">
+        <button class="btn" id="0">0</button>    
+        <button class="btn" id="1">1</button>
+        <button class="btn" id="2">2</button>
+        <button class="btn" id="3">3</button>
+        <button class="btn" id="4">4</button>
+        <button class="btn" id="5">5</button>
+        <button class="btn" id="6">6</button>
+        <button class="btn" id="7">7</button>
+    </div>
+    <ul class="explain">
+        <li id="extitle"></li>
+        <li id="exgabong"></li>
+        <li id="exfavorite"></li>
+    </ul>
+    </div>
+<script>
+    var exTitle = document.getElementById("extitle");
+    var exGabong = document.getElementById("exgabong");
+    var exFavorite = document.getElementById("exfavorite");
+    var button0 = document.getElementById("0")
+    var button1 = document.getElementById("1")
+    var button2 = document.getElementById("2")
+    var button3 = document.getElementById("3")
+    var button4 = document.getElementById("4")
+    var button5 = document.getElementById("5")
+    var button6 = document.getElementById("6")
+    var button7 = document.getElementById("7")    
+    function movieInf(title, gabong, favorite){
+        exTitle.innerHTML = title;
+        exGabong.innerHTML = gabong;
+        exFavorite.innerHTML = favorite;
+        }
+    button0.addEventListener("click", function() {
+        movieInf("해리포터와 마법사의 돌", "개봉일: 2001", "개인평점: ❣❣❣❣❣");
+    });
+    button1.addEventListener("click", function() {
+        movieInf("해리포터와 비밀의 방", "개봉일: 2002", "개인평점: ❣❣❣❣❣");
+    });
+    button2.addEventListener("click", function() {
+        movieInf("해리포터와 아즈카반의 죄수", "개봉일: 2004", "개인평점: ❣❣❣❣❣");
+    });
+    button3.addEventListener("click", function() {
+        movieInf("해리포터와 불의 잔", "개봉일: 2005", "개인평점: ❣❣❣❣❣");
+    });
+    button4.addEventListener("click", function() {
+        movieInf("해리포터와 불사조 기사단", "개봉일: 2007", "개인평점: ❣❣❣❣❣");
+    });
+    button5.addEventListener("click", function() {
+        movieInf("해리포터와 혼혈왕자", "개봉일: 2009", "개인평점: ❣❣❣❣❣❣❣");
+    });
+    button6.addEventListener("click", function() {
+        movieInf("해리포터와 죽음의 성물1", "개봉일: 2010", "개인평점: ❣❣❣❣❣");
+    });
+    button7.addEventListener("click", function() {
+        movieInf("해리포터와 죽음의 성물2", "개봉일: 2011", "개인평점: ❣❣❣❣❣");
+    });
+
+</script>
+</body>
+</html>
