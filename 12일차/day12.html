@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day12 javascript</title>
+    <link rel="stylesheet" href="day12style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body id="wrap">
+    <div class="wrapper">
+        <div class="top">
+            <br>
+            <br>
+            <p id="display">안녕 나는 춘식이야</p>
+        </div>
+        <div class="center">
+            <img id="img" src="00.png" alt="choonsik">
+        </div>
+        <div class="bottom">
+            <input type="text" class="input" id="msgInput" placeholder=" 하고싶은말을 적어주세요">
+            <br>
+            <button class="btn" id="msgBtn">보내기</button>
+        </div>
+    </div>
+<script>
+    
+const display = document.getElementById("display");
+const msgInput = document.getElementById("msgInput");
+const msgBtn = document.getElementById("msgBtn");
+const img = document.querySelector("#img");
+const body = document.getElementById("wrap")
+
+function check() {
+	var message = document.getElementById("msgInput").value;
+	if (message === "춘식아 일어나!") {
+        body.style.backgroundColor = "rgba(96, 11, 11, 0.36)"
+        img.setAttribute("src", `01.png`);
+        console.log("불키지마! 5분만 더 잘래...")
+        display.innerText = "불키지마! 5분만 더 잘래..."
+        msgInput.value = "";
+    } else if (message === "5분 지났어!! 일어나!! 불킨다??") {
+        body.style.backgroundColor = "#FAC8C8"
+        img.setAttribute("src", `02.png`);
+        console.log("더 자고싶은데...")
+        display.innerText = "더 자고싶은데..."
+        msgInput.value = "";
+    } else if (message === "얼른 일어나! 오늘 기분은 어때?") {
+        img.setAttribute("src", `03.png`);
+        console.log("좋아! 근데 라이언은 어딨지?")
+        display.innerText = "좋아! 근데 라이언은 어딨지?"
+        msgInput.value = "";
+    } else if (message === "라이언은 고구마 사러갔어!") {
+        img.setAttribute("src", `04.png`);
+        console.log("진짜? 역시 라이언이 최고야!")
+        display.innerText = "진짜? 역시 라이언이 최고야!"
+        msgInput.value = "";
+    } 
+}
+
+msgBtn.addEventListener("click", check)
+
+</script>
+</body>
+</html>
