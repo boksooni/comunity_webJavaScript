@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day11 javascript</title>
+    <link rel="stylesheet" href="day11style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <br>
+            <br>
+            <p id="display">안녕 나는 춘식이야</p>
+        </div>
+        <div class="center">
+            <img src="choon.png" alt="choonsik">
+        </div>
+        <div class="bottom">
+            <input type="text" class="input" id="msgInput" placeholder=" 하고싶은말을 적어주세요">
+            <br>
+            <button class="btn" id="msgBtn">보내기</button>
+        </div>
+    </div>
+<script>
+    
+const display = document.getElementById("display")
+const msgInput = document.getElementById("msgInput");
+const msgBtn = document.getElementById("msgBtn")
+
+function check() {
+	var message = document.getElementById("msgInput").value;
+	if (message === "춘식아 안녕?") {
+        console.log("안녕 복순!")
+        display.innerText = "안녕 복순!"
+    } else if (message === "오늘 기분은 어때?") {
+        console.log("좋아! 근데 라이언은 어딨지?")
+        display.innerText = "좋아! 근데 라이언은 어딨지?"
+    } else if (message === "라이언은 고구마 사러갔어!") {
+        console.log("진짜? 역시 라이언이 최고야!")
+        display.innerText = "진짜? 역시 라이언이 최고야!"
+    }
+}
+
+msgBtn.addEventListener("click", check)
+
+</script>
+</body>
+</html>
