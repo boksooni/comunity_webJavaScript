@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day10 javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="day10style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="display">
+            <h3 class="displayh"></h3>
+        </div>
+        <div class="container">
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="number">*</button>
+            <button class="number">0</button>
+            <button class="number">#</button>
+        </div>
+        <div class="event">
+            <button id="on">전화걸기</button>
+            <button id="off">전화끊기</button>
+        </div>
+    </div>
+<script>
+    const message = document.querySelector(".displayh");
+    const callOn = document.querySelector("#on");
+    const callOff = document.querySelector("#off")
+    
+    function timeOn() {
+        console.log("전화 중(ღ'ᴗ'ღ) - 복순");
+        message.innerText = "전화 중(ღ'ᴗ'ღ)";
+        message.style.color = "#E16A93";
+    }
+
+    function timeOff() {
+        console.log("전화 끊김(ღ'ᴗ'ღ) - 복순");
+        message.innerText = "전화 끊김(ღ'ᴗ'ღ)";
+        message.style.color = "#8F4646";
+    }
+
+    callOn.addEventListener("click", function() {
+        message.innerText = "전화 거는 중(ღ'ᴗ'ღ)";
+        message.style.color = "#E16A93";
+        setTimeout(timeOn, 2000);
+
+        
+    })
+
+    callOff.addEventListener("click", function() {
+        message.innerText = "전화 끊는 중 (◍•ᴗ•◍)";
+        message.style.color = "#8F4646";
+        setTimeout(timeOff, 2000);
+    })
+</script>
+</body>
+</html>
