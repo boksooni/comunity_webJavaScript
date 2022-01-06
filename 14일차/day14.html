@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day14 javascript</title>
+    <link rel="stylesheet" href="day14style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+<body id="wrap">
+    <div class="wrapper">
+        <div class="top">
+            <br>
+            <br>
+            <p id="display">안녕 나는 춘식이야</p>
+        </div>
+        <div class="center">
+            <img id="img" src="00.png" alt="choonsik">
+        </div>
+        <div class="bottom">
+            <p id="server" style="display:none;"></p>
+            <input type="text" class="input" id="msgInput" placeholder=" 하고싶은말을 적어주세요">
+            <br>
+            <button class="btn" id="msgBtn">보내기</button>
+        </div>
+    </div>
+<script>
+    
+const display = document.getElementById("display");
+const msgInput = document.getElementById("msgInput");
+const msgBtn = document.getElementById("msgBtn");
+const img = document.querySelector("#img");
+const body = document.getElementById("wrap")
+
+var follow = 0;
+var n = 0;
+var server = document.getElementById("server")
+
+
+function check() {
+	var message = document.getElementById("msgInput").value;
+	if (message === "춘식아 일어나!") {
+        body.style.backgroundColor = "rgba(96, 11, 11, 0.36)"
+        img.setAttribute("src", `01.png`);
+        console.log("불키지마! 5분만 더 잘래...")
+        display.innerText = "불키지마! 5분만 더 잘래..."
+        msgInput.value = "";
+    } else if (message === "5분 지났어!! 일어나!! 불킨다??") {
+        server.style.display = "block";
+        var typewriter = new Typewriter(server, {
+        loop: false
+        });
+        typewriter.typeString('system : 춘식이는 일어나기싫어하는 것 같다.')
+        .pauseFor(1500)
+        .deleteChars(19)
+        .typeString('메세지를 다시 한 번 입력해보세요')
+        .pauseFor(1500)
+        .deleteAll()   
+        .start()
+        if (n === 0) {    
+            n++;
+            img.setAttribute("src", `02.png`);
+            console.log("싫어! 더 잘거야!")
+            display.innerText = "싫어! 더 잘거야!"
+            msgInput.value = "";
+        } else if (n ===1) {
+            server.style.display = "none";
+            body.style.backgroundColor = "#FAC8C8"
+            img.setAttribute("src", `02.png`);
+            console.log("더 자고싶은데...")
+            display.innerText = "더 자고싶은데..."
+            msgInput.value = "";   
+        }
+    } else if (message === "얼른 일어나! 오늘 기분은 어때?") {
+        img.setAttribute("src", `03.png`);
+        console.log("좋아! 근데 라이언은 어딨지?")
+        display.innerText = "좋아! 근데 라이언은 어딨지?"
+        msgInput.value = "";
+    } else if (message === "라이언은 고구마 사러갔어!") {
+        img.setAttribute("src", `04.png`);
+        console.log("진짜? 역시 라이언이 최고야!")
+        display.innerText = "진짜? 역시 라이언이 최고야!"
+        msgInput.value = "";
+    } else if (message === "춘식아 나 따라해볼래?") {
+        img.setAttribute("src", `05.png`);
+        console.log("뭔데? 나는 다 따라할 수 있춘!")
+        display.innerText = "뭔데? 나는 다 따라할 수 있춘!"
+        msgInput.value = "";
+    }
+}
+
+
+msgBtn.addEventListener("click", check)
+
+</script>
+</body>
+</html>
